@@ -55,7 +55,7 @@ Bellow are the steps when creating a new django application
 
 - TypeError: __init__() missing 1 required positional argument: 'on_delete'
 
-        **add** on_delete=models.CASCADE (if you have a foreign key on your models)
+        on_delete=models.CASCADE (add where you have a foreign key on your models)
 
 - Field 'id' expected a number but got datetime.datetime(2021, 9, 4, 14, 42, 5, 316108, tzinfo=<UTC>)
 
