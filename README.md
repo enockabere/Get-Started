@@ -1,57 +1,57 @@
-## Create Project Folder
+# Create Project Folder
 Bellow are the steps when creating a new django application
 
-#### Activate Virtual Environment
+### Activate Virtual Environment
 python3 -m venv virtual
 
-#### Download Django
+### Download Django
 python3 -m pip install django && pip freeze > requirements.txt
 
-#### Create a new Django project and call it xyz
+### Create a new Django project and call it xyz
 django-admin startproject xyz .
 
-#### Create third-party app (abc)then connect it to xyz project.
+### Create third-party app (abc)then connect it to xyz project.
 django-admin startapp abc
 
-#### Adding Bootstrap
+### Adding Bootstrap
 pip install django-bootstrap-v5 && pip freeze > requirements.txt
 
-#### Install database dependency
+### Install database dependency
 pip install psycopg2 && pip freeze > requirements.txt
 
-### Models
+## Models
 
-#### First we have to run checks to validate whether the models were defined properly.
+### First we have to run checks to validate whether the models were defined properly.
 python3 manage.py check
 
-#### Make Migrations
+### Make Migrations
 python3 manage.py makemigrations
 
-#### View Migration
+### View Migration
 python3 manage.py sqlmigrate 0001
 
-#### Run Migration
+### Run Migration
 python3 manage.py migrate
 
-### Testing
+## Testing
 
-#### Running Tests
+### Running Tests
 python3 manage.py test abc
 
-### Django Admin
+## Django Admin
 
-#### Create Superuser
+### Create Superuser
 python manage.py createsuperuser
 
-### Uploading Images
+## Uploading Images
 pip install pillow && pip freeze > requirements.txt
 
-### NB:
+## NB:
 
-### To alter Postgres Password
+## To alter Postgres Password
 ALTER USER user_name WITH PASSWORD 'new_password';
 
-### Expected Errors;
+## Expected Errors;
 
 - TypeError: __init__() missing 1 required positional argument: 'on_delete'
 
@@ -69,5 +69,5 @@ ALTER USER user_name WITH PASSWORD 'new_password';
         git remote add origin https://github.com/user/repo
         git push --set-upstream origin master
 
-### Contact details
+## Contact details
 Have any recommendations and/or questions, feel free to email me:[anock.abere@student.moringaschool.com](mailto:anock.abere@student.moringaschool.com)
