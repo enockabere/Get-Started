@@ -3,22 +3,11 @@ How to Deploy Django Applications on Heroku
 # Disclaimer
 - Confirm that your application is running as expected before pushing, runtime errors will cause deployment to fail so make sure you have no bugs.
 - Ignore every code/command followed by `#` in .env file.
-- In section where you are expected to input values do not include `<>` brackets after input
+- In section(s) where you are expected to input values do not include `<>` brackets after input
 - Procedure works best with Django version 3 and above.
 - Run all commands from virtual environment
 # Install heroku CLI
-[Sign up](https://signup.heroku.com/) to Heroku.
-
-Then install the [Heroku Toolbelt](https://toolbelt.heroku.com/). It is a command line tool to manage your Heroku apps
-
-After installing the Heroku Toolbelt, open a terminal and login to your account:
-```bash
-$ heroku login
-Enter your Heroku credentials.
-Email: enock@gmail.com
-Password (typing will be hidden):
-Authentication successful.
-```
+If you don't have heroku, install login
 
 # Preparing the Application
 
@@ -233,7 +222,7 @@ You can open your app through the link generated in your terminal or browser.
 
 or run
 ```bash
-heroku open  --app <insert your heroku app name>
+(virtual)$ heroku open  --app <insert your heroku app name>
 ```
 
 
