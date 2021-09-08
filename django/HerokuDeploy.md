@@ -7,7 +7,7 @@ How to Deploy Django Applications on Heroku
 - Procedure works best with Django version 3 and above.
 - Run all commands from virtual environment
 # Install heroku CLI
-If you don't have heroku, install login
+If you don't have heroku, install and login
 
 # Preparing the Application
 
@@ -218,7 +218,7 @@ Password: <enter password>
 Password (again):<retype password>
 Superuser created successfully.
 ```
-You can open your app through the link generated in your terminal or browser.
+You can open your app through the link generated in your terminal or open app on heroku dashboard.
 
 or run
 ```bash
