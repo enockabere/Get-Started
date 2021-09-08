@@ -6,11 +6,12 @@ Common django errors that you are probably going to encounter during development
 
 ## Models
 Errors coming from your models
-1. TypeError: __init__() missing 1 required positional argument: 'on_delete'
+- TypeError: __init__() missing 1 required positional argument: 'on_delete'
 
 **`solution`**
 
 **Add** `on_delete=models.CASCADE` where you have a foreign key on your models.
+
 Example:
 ```bash
 class Article(models.Model):
@@ -18,7 +19,7 @@ class Article(models.Model):
     post = HTMLField()
     editor = models.ForeignKey(User, on_delete=models.CASCADE)
 ```
-2. Field 'id' expected a number but got datetime.datetime(2021, 9, 4, 14, 42, 5, 316108, tzinfo=<UTC>)
+- Field 'id' expected a number but got datetime.datetime(2021, 9, 4, 14, 42, 5, 316108, tzinfo=<UTC>)
 
 **`solution`**
 
@@ -28,7 +29,7 @@ class Article(models.Model):
 # Code Versioning Errors
 
 ## Pushing To GIthub
-1. Fatal-the-remote-end-hung-up-unexpectedly
+- Fatal-the-remote-end-hung-up-unexpectedly
 
 **`solution`**
 
