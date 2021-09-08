@@ -6,11 +6,11 @@ Common django errors that you are probably going to encounter during development
 
 ## Models
 Errors coming from your models
-- TypeError: __init__() missing 1 required positional argument: 'on_delete'
+**ERROR:** TypeError: __init__() missing 1 required positional argument: 'on_delete'
 
-**`solution`**
+***`solution`***
 
-**Add** `on_delete=models.CASCADE` where you have a foreign key on your models.
+Add `on_delete=models.CASCADE` where you have a foreign key on your models.
 
 Example:
 ```bash
@@ -19,9 +19,9 @@ class Article(models.Model):
     post = HTMLField()
     editor = models.ForeignKey(User, on_delete=models.CASCADE)
 ```
-- Field 'id' expected a number but got datetime.datetime(2021, 9, 4, 14, 42, 5, 316108, tzinfo=<UTC>)
+**ERROR:** Field 'id' expected a number but got datetime.datetime(2021, 9, 4, 14, 42, 5, 316108, tzinfo=<UTC>)
 
-**`solution`**
+***`solution`***
 
 - Go to `migration files`. Find 002 (or 003,004 etc )_auto.py files
 - Change field = models.ForeignKey(default = `django.utils.timezone.now`) to default = `1`
@@ -29,9 +29,9 @@ class Article(models.Model):
 # Code Versioning Errors
 
 ## Pushing To GIthub
-- Fatal-the-remote-end-hung-up-unexpectedly
+**ERROR:** Fatal-the-remote-end-hung-up-unexpectedly
 
-**`solution`**
+***`solution`***
 
 ```bash
 git remote remove origin
