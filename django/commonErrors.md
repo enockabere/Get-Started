@@ -26,6 +26,18 @@ class Article(models.Model):
 
 - Go to `migration files`. Find 002 (or 003,004 etc )_auto.py files
 - Change field = models.ForeignKey(default = ~~django.utils.timezone.now~~) to default = `1`
+    
+ ## Import Errors
+    
+**ERROR:** ImportError: cannot import name 'six' from 'django.utils' (/home/hypertext/moringa/Core/Python/Django/Instagram/virtual/lib/python3.9/site-packages/django/utils/__init__.py)
+
+Django six is not available for Django versions higher than django2, so a quick fix is to install it via pip:
+    
+***`solution`***
+
+```bash
+pip install django-utils-six
+```
 
 # Code Versioning Errors
 
