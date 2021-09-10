@@ -4,7 +4,7 @@ Common django errors that you are probably going to encounter during development
 
 # Development Errors
 
-## Models
+## Models Errors
 Errors coming from your models
 
 **ERROR:** TypeError: __init__() missing 1 required positional argument: 'on_delete'
