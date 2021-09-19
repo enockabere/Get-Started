@@ -126,7 +126,7 @@ DB_USER='postgres username'
 DB_PASSWORD='postgres password'
 DB_HOST='127.0.0.1'
 MODE='prod' #set to 'dev' in production
-ALLOWED_HOSTS='.localhost', '.herokuapp.com', '.127.0.0.1' #remove it in development
+ALLOWED_HOSTS='.localhost','.herokuapp.com','.127.0.0.1' #remove it in development
 DISABLE_COLLECTSTATIC=1
 ```
 
