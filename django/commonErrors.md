@@ -27,6 +27,17 @@ class Article(models.Model):
 - Go to `migration files`. Find 002 (or 003,004 etc )_auto.py files
 - Change field = models.ForeignKey(default = ~~django.utils.timezone.now~~) to default = `1`
 
+**ERROR:** django.template.exceptions.TemplateSyntaxError: 'crispy_forms_tags' is not a registered tag library. Must be one of:
+
+![Error](static/images/1.png)
+
+***`solution`***
+
+Install latest stable version into your python path using pip:
+```bash
+pip install --upgrade django-crispy-forms
+```
+
 # Code Versioning Errors
 
 ## Pushing To GIthub
