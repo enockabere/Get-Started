@@ -4,8 +4,7 @@ Common django errors that you are probably going to encounter during development
 
 # Development Errors
 
-## Models
-Errors coming from your models
+## Models Errors
 
 **ERROR:** TypeError: __init__() missing 1 required positional argument: 'on_delete'
 
@@ -26,6 +25,18 @@ class Article(models.Model):
 
 - Go to `migration files`. Find 002 (or 003,004 etc )_auto.py files
 - Change field = models.ForeignKey(default = ~~django.utils.timezone.now~~) to default = `1`
+    
+ ## Import Errors
+    
+**ERROR:** ImportError: cannot import name 'six' from 'django.utils' (/home/hypertext/moringa/Core/Python/Django/Instagram/virtual/lib/python3.9/site-packages/django/utils/__init__.py)
+
+Django six is not available for Django versions higher than django2, so a quick fix is to install it via pip:
+    
+***`solution`***
+
+```bash
+pip install django-utils-six
+```
 
 **ERROR:** django.template.exceptions.TemplateSyntaxError: 'crispy_forms_tags' is not a registered tag library. Must be one of:
 

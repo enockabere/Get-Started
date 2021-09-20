@@ -38,7 +38,7 @@ pip install gunicorn && pip freeze > requirements.txt
 This file contains the python version you are using for heroku to use, create `runtime.txt` in your project root and add your python version in the following format. Make sure to copy it correct(lowercase).
 
 ```
-python-3.6.4 
+python-3.9.5 
 ```
 To check your python Version:
 ```
@@ -126,7 +126,7 @@ DB_USER='postgres username'
 DB_PASSWORD='postgres password'
 DB_HOST='127.0.0.1'
 MODE='prod' #set to 'dev' in production
-ALLOWED_HOSTS='.localhost', '.herokuapp.com', '.127.0.0.1' #remove it in development
+ALLOWED_HOSTS='.localhost','.herokuapp.com','.127.0.0.1' #remove it in development
 DISABLE_COLLECTSTATIC=1
 ```
 

@@ -7,6 +7,11 @@ Helpful Commands in creating a new django application
 ```bash
 python3 -m venv virtual
 ```
+To activate Virtual Environment
+
+```bash
+source virtual/bin/activate
+```
 
 ### Download Django
 ```bash
