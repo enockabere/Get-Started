@@ -49,6 +49,28 @@ Install latest stable version into your python path using pip:
 pip install --upgrade django-crispy-forms
 ```
 
+**ERROR:**  ModuleNotFoundError: No module named 'whitenoise'
+![Error](static/images/2.png)
+
+***`solution`***
+WhiteNoise allows your web app to serve its own static files, making it a self-contained unit that can be deployed anywhere without relying on nginx, Amazon S3 or any other external service. 
+
+```bash
+pip install whitenoise
+```
+Add whitenoise to `MIDDLEWARE` on **settings.py**
+```bash
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+]
+```
 # Code Versioning Errors
 
 ## Pushing To GIthub
