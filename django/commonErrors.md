@@ -53,6 +53,7 @@ pip install --upgrade django-crispy-forms
 ![Error](static/images/2.png)
 
 ***`solution`***
+
 WhiteNoise allows your web app to serve its own static files, making it a self-contained unit that can be deployed anywhere without relying on nginx, Amazon S3 or any other external service. 
 
 ```bash
