@@ -51,6 +51,7 @@ INSTALLED_APPS = [
 To use the Cloudinary Django library, we have to configure our cloud_name, api_key, and api_secret.
 
 We can find our account-specific configuration credentials on the Dashboard page of the account console as shown below.
+
 ![Cloudinary](static/images/3.png)
 
 Click on `Configure Your SDK` and you'll se a pop up with a number of configuration parameters to use. On the pop window choose python and copy the configuration below it.
