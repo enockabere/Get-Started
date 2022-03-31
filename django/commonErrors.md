@@ -38,11 +38,6 @@ Django allows you to override the default user model by providing a value for th
 
 - To fix add **AUTH_USER_MODEL = 'myapp.MyUser'** to settings.py above MIDDLEWARE
 
-**_`solution`_**
-
-- Go to `migration files`. Find 002 (or 003,004 etc )\_auto.py files
-- Change field = models.ForeignKey(default = ~~django.utils.timezone.now~~) to default = `1`
-
 **ERROR:** Insert or update on table "django_admin_log" violates foreign key constraint when saving new model in admin
 
 It looks like my Django user table somehow got stale and contained an outdated primary key.
@@ -50,12 +45,18 @@ It looks like my Django user table somehow got stale and contained an outdated p
 **_`solution`_**
 
 - Drop Database
-  -DROP SCHEMA public CASCADE;
+
+  - DROP SCHEMA public CASCADE;
+
 - Create Schema
-  -CREATE SCHEMA public;
+
+  - CREATE SCHEMA public;
+
 - Make migrations
-  -Python3 manage.py makemigrations
-  -Python3 manage.py migrate
+
+  - Python3 manage.py makemigrations
+
+  - Python3 manage.py migrate
 
 ## Import Errors
 

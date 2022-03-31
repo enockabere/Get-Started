@@ -37,7 +37,7 @@ Have any recommendations and/or questions, feel free to email me:[maebaenock95@g
 
 ```mermaid
 flowchart TD;
-    A(Eat, Sleep, CODE, Repeat] --> B{While Alive};
+    A(Eat, Sleep, CODE, Repeat) --> B{While Alive};
     B--> |True| --> A;
     B--> |False| --> c((Heart Stopped));
 ```
