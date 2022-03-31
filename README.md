@@ -31,7 +31,11 @@ To make advancements/modifications, follow these steps:
 
 - markdown
 
-````flow
+## Contact details
+
+Have any recommendations and/or questions, feel free to email me:[maebaenock95@gmail.com](mailto:maebaenock95@gmail.com)
+
+```flow
 st=>start: Start
 op=>operation: Eat, Sleep, CODE, repeat
 cond=>condition: Alive
@@ -40,9 +44,5 @@ e=>end
 st->op->cond
 cond(False)->e
 cond(True)->op
-​```
 
-## Contact details
-
-Have any recommendations and/or questions, feel free to email me:[maebaenock95@gmail.com](mailto:maebaenock95@gmail.com)
-````
+```
