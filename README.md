@@ -36,7 +36,7 @@ To make advancements/modifications, follow these steps:
 Have any recommendations and/or questions, feel free to email me:[maebaenock95@gmail.com](mailto:maebaenock95@gmail.com)
 
 ```mermaid
-graph TD;
+flowchart TD;
 
     A(())--B;
     B(Eat <br> Sleep <br> CODE <br> repeat] --> C{While Alive};
