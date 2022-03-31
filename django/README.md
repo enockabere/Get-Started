@@ -4,9 +4,7 @@
 
 Helpful Commands in creating a new django application
 
-# NB
-
-- Remember to update your **requirements.txt** once you install a package in your virtual environment.
+Remember to update your **requirements.txt** once you install a package in your virtual environment.
 
 ### Activate Virtual Environment
 
@@ -56,7 +54,9 @@ pip install psycopg2
 
 ### Updating You project dependencies
 
-pip freeze saves all packages in the environment including those that you don’t use in your current project. **pipreqs** only saves the packages that are installed in your virtual environment
+Pip freeze saves all packages in the environment including those that you don’t use in your current project.
+
+**pipreqs** only saves the packages that are installed in your virtual environment
 
 ```bash
 pip install pipreqs
@@ -140,15 +140,15 @@ pip install django-tinymce
 
 # Creating a new django application on Windows
 
-In windows: Press Windows (or Windows+R) and then type “cmd”: Run the Command Prompt in normal mode.
+In windows: Press Windows (or Windows+R) and then type “cmd”: Run the Command Prompt in normal mode. The follow the processes below;
 
-- cd to project folder
+cd to project folder
 
 ```bash
 cd C:\Users\user\Desktop\UserDjangoProject> pip install virtualenv
 ```
 
-- Create Virtual Environment
+Create Virtual Environment
 
 ```bash
 virtualenv -p python3 venv
@@ -166,9 +166,11 @@ py3  -m venv venv
 venv\Scripts\activate
 ```
 
-- Install Django and other dependencies using pip (Command same as Linux)
-- Run migrations (Command same as Linux)
-- Update Requirements.txt file
+Install Django and other dependencies using pip (Command same as Linux)
+
+Run migrations (Command same as Linux)
+
+Update Requirements.txt file
 
 ```bash
 pip install pipreqs
@@ -178,7 +180,7 @@ pip install pipreqs
 pipreqs>requirements.txt
 ```
 
-- Run the django project
+Run the django project
 
 ```bash
 ./manage.py runserver
