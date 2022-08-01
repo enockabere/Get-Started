@@ -7,7 +7,7 @@ I will demonstrate how to install and configure Postgres and Django in a Python 
 - Confirm that your application is running as expected before deploying, runtime errors will cause deployment to fail so make sure you have no bugs.
 - In section(s) where you are expected to input values do not include `<>` brackets after input
 - Procedure works best with Django version 3 and above.
-- For centos substitute `apt-get` with `yum`
+- For centOS substitute `apt-get` with `yum`
 
 # Install Required Packages
 
@@ -86,7 +86,7 @@ Type `psql` to get the PostgreSQL prompt to set up your requirements (i.e Create
 
 Perform the following actions while on the server;
 
-* Pull/fork/clone your project from the remote repository from the linux terminal.
+* Pull/fork/clone your project from the remote repository using the linux terminal.
 * Configure your project virtual environment and install all the required dependencies including `psycopg2`
 * Configure your `.env` file
 * Make migrations
