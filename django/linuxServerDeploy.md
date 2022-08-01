@@ -1,11 +1,10 @@
-Serving Django App using Postgres With Apache and mod_wsgi on Linux Server(ubuntu/Centos)
+Serving Django App using Postgres With Apache and mod_wsgi on Linux Server(Ubuntu/CentOS)
 =========================================================================================
 
 I will demonstrate how to install and configure Postgres and Django in a Python virtual environment. We’ll then set up Apache in front of our application so that it can handle client requests directly before passing requests that require application logic to the Django app. We will do this using the mod_wsgi Apache module that can communicate with Django over the WSGI interface specification.
 
 # Disclaimer
 - Confirm that your application is running as expected before deploying, runtime errors will cause deployment to fail so make sure you have no bugs.
-- Ignore every code/command followed by `#` in .env file.
 - In section(s) where you are expected to input values do not include `<>` brackets after input
 - Procedure works best with Django version 3 and above.
 - For centos substitute `apt-get` with `yum`
@@ -30,9 +29,9 @@ sudo apt-get install python3
 python3 --version
 ```
 
-### Installing Apache (Centos/ubuntu)
+### Installing Apache (CentOS/Ubuntu)
 
-#### CENTOS 7/8
+#### CentOS 7/8
 Enable the EPEL repository to get pip
 ```
 sudo yum install epel-release
@@ -67,7 +66,7 @@ sudo nano /var/lib/pgsql/data/pg_hba.conf
 Configure this by modifying the two host lines at the bottom of the file. Change the last column (the authentication method) to md5. This will allow password authentication.
 When you are finished, save and close the file.
 
-With our new configuration changes, we need to restart the service. We will also enable PostgreSQL so that it starts automatically at boot.
+With our new configuration changes, we need to restart the service. We'll also enable PostgreSQL so that it starts automatically at boot.
 
 ```
 sudo systemctl restart postgresql
@@ -80,14 +79,14 @@ sudo systemctl enable postgresql
 sudo su - postgres
 ```
 
-Type `psql` to get the PostgreSQL prompt where we can set up your requirements (Database, Database user and Privileges)
+Type `psql` to get the PostgreSQL prompt to set up your requirements (i.e Create DB, Create DB User and Set Privileges)
 
 
 # Preparing the Application
 
-Add the following to our project, we will cover each of them in detail in the below section
+Perform the following actions while on the server;
 
-* Pull your project from the remote repository.
+* Pull/fork/clone your project from the remote repository from the linux terminal.
 * Configure your project virtual environment and install all the required dependencies including `psycopg2`
 * Configure your `.env` file
 * Make migrations
