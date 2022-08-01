@@ -5,7 +5,7 @@ I will demonstrate how to install and configure Postgres and Django in a Python 
 
 # Disclaimer
 - Confirm that your application is running as expected before deploying, runtime errors will cause deployment to fail so make sure you have no bugs.
-- In section(s) where you are expected to input values do not include `<>` brackets after input
+- In section(s) where you are expected to input values do not include `<>`
 - Procedure works best with Django version 3 and above.
 - For centOS substitute `apt-get` with `yum`
 
