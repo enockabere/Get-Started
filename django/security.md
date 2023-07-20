@@ -4,7 +4,7 @@
 
 Securing your Django app is crucial to protect it from potential security threats. Here are some measures you can take to ensure your Django app is safe:
 
-# Insecure Cookie Setting: Missing Secure Flag
+## Insecure Cookie Setting: Missing Secure Flag
 
 This flag is an essential security measure to ensure that cookies are only sent over secure, encrypted connections (HTTPS) and not exposed to potential security risks in unsecured HTTP connections.
 
@@ -22,7 +22,7 @@ Additionally, if you are using the Django csrf middleware to protect against Cro
 CSRF_COOKIE_SECURE = True
 ```
 
-# Insecure Cookie Setting: Missing HttpOnly Flag
+## Insecure Cookie Setting: Missing HttpOnly Flag
 
 The "Insecure cookie setting: missing HttpOnly flag" vulnerability indicates that your Django app is not setting the "HttpOnly" flag on its cookies. The HttpOnly flag is a security measure that can be applied to cookies to enhance the protection of sensitive information stored in cookies.
 
@@ -40,7 +40,7 @@ SESSION_COOKIE_HTTPONLY = True
 CSRF_COOKIE_HTTPONLY = True
 ```
 
-# Missing Security Header: Strict-Transport-Security
+## Missing Security Header: Strict-Transport-Security
 
 The "Missing security header: Strict-Transport-Security" vulnerability is related to the lack of the HTTP Strict Transport Security (HSTS) header in your Django app's HTTP responses. The HSTS header is a security feature that instructs modern web browsers to enforce the use of HTTPS (HTTP over TLS/SSL) for all future communications with the website, even if the user tries to access the site using HTTP.
 
@@ -56,7 +56,7 @@ SECURE_HSTS_SECONDS = 31536000
 
 You can adjust the SECURE_HSTS_SECONDS value to suit your specific needs. Setting it to a longer duration is generally recommended to ensure long-term protection.
 
-# Missing Security Header: X-XSS-Protection
+## Missing Security Header: X-XSS-Protection
 
 The "Missing security header: X-XSS-Protection" vulnerability indicates that your Django app is not sending the "X-XSS-Protection" header in its HTTP responses. The X-XSS-Protection header is a security feature supported by modern web browsers that helps mitigate certain cross-site scripting (XSS) attacks.
 
@@ -75,7 +75,7 @@ SECURE_BROWSER_XSS_FILTER = True
 
 The `SECURE_BROWSER_XSS_FILTER` setting enables the XSS filter in supported browsers and automatically adds the "X-XSS-Protection" header to the HTTP responses.
 
-# Missing Security Header: Content-Security-Policy
+## Missing Security Header: Content-Security-Policy
 
 Content-Security-Policy" vulnerability indicates that your Django app is not sending the "Content-Security-Policy" (CSP) header in its HTTP responses. Content Security Policy is a powerful security feature that helps protect your web application from various types of attacks, including cross-site scripting (XSS), data injection, and other code injection attacks.
 
@@ -95,7 +95,7 @@ CONTENT_SECURITY_POLICY = "default-src 'self'; script-src 'self'; style-src 'sel
 
 The `CONTENT_SECURITY_POLICY` setting defines the Content Security Policy for your application. The example policy above allows scripts and styles only from the same origin ('self') and blocks everything else
 
-# Server Software and Technology Found
+## Server Software and Technology Found
 
 Remove or modify server banners:
 Most web servers include a "Server" header in their responses that discloses the server software and version number. You can reconfigure your web server to hide this header or modify it to provide less specific information.
@@ -114,7 +114,7 @@ Most web servers include a "Server" header in their responses that discloses the
 4. Harden the server configuration:
    Follow best practices for server configuration and security. Disable unnecessary server modules and services, and use security-related settings to enhance protection.
 
-# Security.txt file Missing
+## Security.txt file Missing
 
 The "Security.txt" file is a simple text file that provides essential information about the security policies and responsible disclosure guidelines for your web application or website. It is a standard proposed by the "Security.txt" working group and is used to make it easier for security researchers and ethical hackers to report security vulnerabilities they discover.
 
@@ -144,6 +144,6 @@ Encryption: https://example.com/pgp-key
 Disclosure: Full
 ```
 
-# Use HTTPS
+## Use HTTPS
 
 Serve your Django app over HTTPS to encrypt data transmitted between the server and clients, ensuring data privacy and preventing man-in-the-middle attacks.
