@@ -13,16 +13,12 @@ This flag is an essential security measure to ensure that cookies are only sent 
 In your Django settings file (usually named settings.py), make sure you have configured the SESSION_COOKIE_SECURE setting to True. This setting ensures that session cookies are only sent over HTTPS connections.
 
 ```bash
-- settings.py
-
 SESSION_COOKIE_SECURE = True
 ```
 
 Additionally, if you are using the Django csrf middleware to protect against Cross-Site Request Forgery (CSRF) attacks, ensure that you also set the CSRF_COOKIE_SECURE setting to True.
 
 ```bash
-- settings.py
-
 CSRF_COOKIE_SECURE = True
 ```
 
@@ -39,14 +35,9 @@ By setting the HttpOnly flag, you limit the exposure of cookies to only the HTTP
 In your Django settings file (usually named settings.py), make sure that you have set the SESSION_COOKIE_HTTPONLY and CSRF_COOKIE_HTTPONLY settings to True.
 
 ```bash
-- settings.py
-
-- Enable HttpOnly flag for session cookies
 SESSION_COOKIE_HTTPONLY = True
 
--Enable HttpOnly flag for CSRF cookies
 CSRF_COOKIE_HTTPONLY = True
-
 ```
 
 # Missing Security Header: Strict-Transport-Security
@@ -60,9 +51,6 @@ By enabling HSTS, you can improve the security of your Django app by ensuring th
 In your Django settings file (usually named settings.py), set the SECURE_HSTS_SECONDS setting to a non-zero value. This value represents the duration (in seconds) for which the HSTS policy should be applied.
 
 ```bash
-- settings.py
-
-- Enable HSTS with a duration of 1 year (31536000 seconds)
 SECURE_HSTS_SECONDS = 31536000
 ```
 
@@ -79,15 +67,10 @@ When the X-XSS-Protection header is present in the HTTP response, it allows the 
 In your Django settings file (usually named settings.py), you can add middleware that adds the "X-XSS-Protection" header to your HTTP responses. Django's middleware allows you to modify the HTTP response headers before they are sent to the client.
 
 ```bash
-- settings.py
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
 ]
-
-- Add the X-XSS-Protection header with a value to enable XSS protection
 SECURE_BROWSER_XSS_FILTER = True
-
 ```
 
 The `SECURE_BROWSER_XSS_FILTER` setting enables the XSS filter in supported browsers and automatically adds the "X-XSS-Protection" header to the HTTP responses.
@@ -103,8 +86,6 @@ The Content-Security-Policy header allows you to define a policy that instructs 
 In your Django settings file (usually named settings.py), you can add middleware that adds the "Content-Security-Policy" header to your HTTP responses. Django's middleware allows you to modify the HTTP response headers before they are sent to the client.
 
 ```bash
-- settings.py
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
 ]
